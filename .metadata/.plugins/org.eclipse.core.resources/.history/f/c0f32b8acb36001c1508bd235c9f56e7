@@ -1,0 +1,42 @@
+package com.example.controller;
+
+import javax.servlet.http.HttpSession;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/ex-10")
+public class Ex10Controller {
+
+	// セッションスコープを使うための設定
+	@Autowired
+	private HttpSession session;
+	
+	@RequestMapping("")
+	public String index() {
+		//入力画面にフォワード
+		return "ex-10-input";
+	}
+	
+	@RequestMapping("/input-info")
+	public String inputName(String name, Integer age, String comment){
+		//	セッションスコープに名前をnameというキー名で格納
+		session.setAttribute("name", name);
+		session.setAttribute("age", age);
+		session.setAttribute("comment", comment);
+		//	アウトプット画面にフォワード
+		return "ex-10-input";
+	}
+	
+	@RequestMapping("/to-output")
+	public String toPage1() {
+		return "ex-10-output";
+	}
+	@RequestMapping("/to-output2")
+	public String toPage2() {
+		return "ex-10-output2";
+	}
+}

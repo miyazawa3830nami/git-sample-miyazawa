@@ -1,0 +1,12 @@
+package controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("/ex01")
+public class Ex01Comtroller {
+
+	@RequestMapping("/show-name")
+	public String showName() {
+		return "ex-01";
+	}
+}

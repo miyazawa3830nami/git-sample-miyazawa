@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>入力画面</title>
+</head>
+<body>
+<h2>アンケートフォーム</h2>
+<form action="">
+<p>名前：<br><input type="text" name="name"></p>
+<p>メール：<br><input type="text" name="mail"></p>
+<p>性別：<br><input type="radio" name="gender"></p>
+<p>趣味：<br><input type="checkbox" name="hobby"></p>
+<p>好きな言語：<br>
+	<select name="language">
+	<option value="">----</option>
+	<option value="java">Java</option>
+	<option value="other">そのほか</option>
+	</select>
+</p>
+</form>
+</body>
+</html>

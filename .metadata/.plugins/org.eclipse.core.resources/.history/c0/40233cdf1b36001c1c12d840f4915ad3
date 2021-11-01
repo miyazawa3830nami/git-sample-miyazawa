@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>演習６</title>
+</head>
+<body>
+System.out.println("名前：" + name);
+System.out.println("年齢：" + age);
+System.out.println("コメント：" + comment);
+</body>
+</html>

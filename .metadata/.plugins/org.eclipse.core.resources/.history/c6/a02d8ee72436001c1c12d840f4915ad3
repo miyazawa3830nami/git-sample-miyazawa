@@ -1,0 +1,13 @@
+package com.example.form;
+
+public class Ex07Form {
+	/** num1 */
+	private String num1;
+	/** num2 */
+	private String num2;
+	
+	public int getIntNum1() {
+		return Integer.parseInt(num1);
+	}
+	
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>演習20</title>
+</head>
+<body>
+<span th::fragment="name">
+名前：山田太郎
+</span>
+
+<span th::fragment="age">
+年齢：33
+</span>
+</body>
+</html>

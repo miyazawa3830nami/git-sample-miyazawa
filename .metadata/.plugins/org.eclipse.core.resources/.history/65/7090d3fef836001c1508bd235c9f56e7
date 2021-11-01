@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ex-12output</title>
+</head>
+<body>
+<h2>結果</h2>
+名前：<span th:text="${member.name}">ダミー</span><br>
+年齢：<span th:text="${member.age}">ダミー</span><br>
+所持金：<span th:text="${member.money}">ダミー</span><br>
+コメント：<span th:text="${member.comment}">ダミー</span><br>
+演習13:
+<span th:if="${member.age<20" th:text="未成年です">ダミー</span>
+<span th:if="${member.age>=20" th:text="成人です">ダミー</span>
+</body>
+</html>

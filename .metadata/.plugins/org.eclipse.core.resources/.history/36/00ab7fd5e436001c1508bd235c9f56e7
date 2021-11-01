@@ -1,0 +1,9 @@
+package com.example.form;
+
+public class Ex10ReceiveForm {
+	private String name;
+	private String age;
+	private String comment;
+	
+	
+}

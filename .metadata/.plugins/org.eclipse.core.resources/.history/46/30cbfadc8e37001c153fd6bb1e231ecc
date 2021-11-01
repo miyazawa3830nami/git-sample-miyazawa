@@ -1,0 +1,38 @@
+package com.example.controller;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+	/**
+	 * 入力画面表示用
+	 * @param model　モデル（リクエストスコープ）
+	 * @return　入力画面
+	 */
+	
+	@RequestMapping("")
+	public String index(Model model) {
+		
+		//	趣味のマップを作る
+		//	キーがid(Integer)、バリューが趣味名(String)
+		//	キーのidはリクエストパラメータで送られてくる値用
+		//	バリューは画面表示用の文字列用
+		Map<Integer,String> hobbyMap = 
+				new LinkedHashMap<>();
+		hobbyMap.put(1, "野球");
+		hobbyMap.put(2, "サッカー");
+		hobbyMap.put(3, "テニス");
+		
+		//	趣味のマップをリクエストスコープに格納
+		model.addAttribute("hobbyMap",hobbyMap);
+		
+		return "user/input";
+	}
+}

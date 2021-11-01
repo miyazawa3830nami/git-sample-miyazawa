@@ -1,0 +1,22 @@
+package com.example.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/receive")
+public class Ex09Controller {
+
+	@RequestMapping("")
+	public String index() {
+		return "ex-09";
+	}
+
+	@RequestMapping("/input-mail")
+	public String inputInfo(String mail, Model model) {
+		model.addAttribute("mail", mail);
+		return "ex-09-result";
+	}
+
+}

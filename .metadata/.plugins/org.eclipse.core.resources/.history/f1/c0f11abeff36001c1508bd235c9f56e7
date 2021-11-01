@@ -1,0 +1,8 @@
+package com.example.controller;
+
+
+@Controller
+@RequestMapping("/exam03")
+public class ReceiveNameController {
+	System.out.println()
+}

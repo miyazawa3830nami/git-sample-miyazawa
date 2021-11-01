@@ -1,0 +1,11 @@
+package com.example.controller;
+
+@Controller
+@RequestMapping("/ex14")
+public class Ex14Controller {
+
+	@RequestMapping("")
+	public String index() {
+		return "ex-14";
+	}
+}
